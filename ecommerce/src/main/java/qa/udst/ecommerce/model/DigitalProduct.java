@@ -19,6 +19,12 @@ public class DigitalProduct extends BaseProduct {
         this.downloadLink = downloadLink;
     }
 
+    public DigitalProduct(int id, String name, double price, String downloadLink) {
+        super(name, price, ProductCategory.DIGITAL);
+        this.setId(id);
+        this.downloadLink = downloadLink;
+    }
+
     @Override
     public void displayInfo() {
         super.displayInfo();

@@ -25,6 +25,7 @@ public abstract class BaseProduct {
         System.out.println("Price: $" + price);
         System.out.println("Category: " + category);
     }
+    
 
     public double calculateDiscount(double percentage) {
         return price * (1 - percentage / 100);

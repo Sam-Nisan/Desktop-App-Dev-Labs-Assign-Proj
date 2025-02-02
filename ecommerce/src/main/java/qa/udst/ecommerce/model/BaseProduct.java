@@ -1,5 +1,6 @@
 package qa.udst.ecommerce.model;
 
+import jakarta.validation.constraints.*;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 
@@ -9,8 +10,16 @@ import lombok.experimental.SuperBuilder;
 @SuperBuilder
 public abstract class BaseProduct {
     private int id;
+
+    @NotBlank(message = "Name is required")
+    @Size(min = 3, max = 100, message = "Name must be between 3 and 100 characters")
     private String name;
+
+    @NotNull(message = "Price is required")
+    @Positive(message = "Price must be greater than 0")
     private double price;
+
+    @NotNull(message = "Category is required")
     private ProductCategory category;
 
     public BaseProduct(String name, double price, ProductCategory category) {

@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 @Data
 @NoArgsConstructor
-public class Catalog {
+public class ProductInventory {
     private ArrayList<BaseProduct> products = new ArrayList<>();
 
     public void addProduct(BaseProduct product) {

@@ -1,23 +1,21 @@
 package qa.udst.backend.controllers;
 
-import java.util.List;
-
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.CrossOrigin;
-
 import qa.udst.backend.models.Program;
 import qa.udst.backend.repositories.ProgramRepository;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/programs")
-@CrossOrigin(origins = "*") // For development purposes
+@RequiredArgsConstructor
 public class ProgramController {
     
-    @Autowired 
-    private ProgramRepository programRepository;
+    private final ProgramRepository programRepository;
     
     @GetMapping
     public List<Program> getAllPrograms() {

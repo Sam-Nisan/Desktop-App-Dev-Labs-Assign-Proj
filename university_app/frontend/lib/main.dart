@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:my_app/global/global.parameter.dart';
-import 'package:my_app/pages/ccit.page.dart';
-import 'package:my_app/pages/home.page.dart';
 
 void main() {
   runApp(MyApp());

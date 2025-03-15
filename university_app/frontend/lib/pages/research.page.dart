@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:my_app/widgets/mydrawer.widget.dart';
 
 class ResearchPage extends StatelessWidget {
   @override
